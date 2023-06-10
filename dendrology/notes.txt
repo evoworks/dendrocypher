@@ -1,0 +1,16 @@
+DONE --Add a FORESTRY object for dealing with tree related stuff that does not require seq data!!!
+
+NOTE: Clade and branch labels follow the paml format.  # to label a branch.  $ to label a clade (must 
+decide if the $ label will be inlcusive or exclusive of ancestral branch).  To start: label types 
+cannot be mixed (# or $ only), and only one $ mark allowed!!!
+
+
+NOTES2:
+1. Indeed, because the program keeps the computer running needlessly, it also needlessly 
+   increases the entropy of the universe, thereby hastening said heat death. In short, 
+   such a program is quite environmentally unfriendly and should be considered a threat 
+   to our species. Don't write code like this.
+
+2. Of course, performing any kind of additional work, whether by humans or machines, also
+   increases the entropy of the universe, thereby hastening heat death. This is a good 
+   argument to keep in mind for times when your employer requests extra overtime.

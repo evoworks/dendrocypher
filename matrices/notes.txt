@@ -1,0 +1,51 @@
+NOTE: -copied to Proteus_test on 13 May 2009!
+      -check "Matrices" project for updates!!!
+      - moved "matrix_demo.h" and added erquired includes
+      
+      - reallocate method need a safety check!!!!
+
+///////////////////////////////////////////////
+To-do list:
+a. clean up comments etc.
+b. CHECK THAT FREQ SUM TO 1; if not, rescale with a warning to avoid a terminate() call over 
+very small rounding errors!!!
+
+Future needs:
+1.  DONE: Complete subclass CODON_matrix
+2.  DONE: Complete subclass AA_matrix
+3.  Understand "friend istream& operator >>" so that I can add capacity to read matrix elements
+    from a file.  This will be essnetial for user-defined AA exxhangabilties!!!
+4.  Loook into effiecny inssue described in NOTES1 below!!!
+
+  
+NOTE1:  some of the overloaded operators construct a matrix in the funtion and pass it by value as a
+        return to main (etc.).  This seems to come with some overhead.  The argumenst to the overloaded
+        operator functions are ptrs to matrices, so no apparent overhead here.  It might be possible
+        (or necessary) to work with ptrs to return the matrices and therby improve effeciency.  This
+        could be a big deal with the likekihood calcualtions. [COPY THIS NOTE TO THE LIKELIHOOD NOTES!]
+    
+NOTE2:  Scaling the GTR so the mean substitution rate = 1   
+   
+   --The -sum diagonals = + sum off-diagonals; work with the diagonal elements.  
+   
+   --We want to scale (S) the diagonals(D_i) so that the mean = 1
+   
+     -- Hence:  (S*D_i + S*D_i + S*D_i + S*D_i) = 1
+     
+     --         S*(D_i + D_i + D_i + D_i) = 1
+     
+     --         S = 1/(D_i + D_i + D_i + D_i)
+     
+     --         b/c D_i will be negative:  -1.0 * S
+
+NOTE3:  Anlystical computation of P(t) under TN93 (and HKY85) yields transiton
+        probabilties that are NOT acaled so the mean rate is 1.  They are not wrong,
+        but they are not in a useful form!  Hence, I no long use the "set_TN93"
+        and "set_HKY95" functions.  Correctly scaled transition proababitlies
+        for these models are obtained by setting them up as a special case of the
+        GTR model!!!!
+        
+NOTE4:  Implimented a "scale_rates()" method that sets the rate paramertes relative
+        to f=1;  This does NOT make a differnce on P(t); so prehaps any scaling should be done
+        in the ML object and this method shoudl be removed?
+   
