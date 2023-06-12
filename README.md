@@ -8,9 +8,13 @@ The primary use of DendroCypher is to assist the process of identify and labelli
 
 DendroCypher is written in C++.  It is based on tree and matrix classes originally developed for the program PROTEUS.
 
-DendroCypher was developed to support a Protocols Unit within the *Current Protocols in Bioinformatics*. That Unit is currently in review.
+DendroCypher was developed to support a Protocols Unit within the *Current Protocols in Bioinformatics*. The paper describing the DendroCypher:
 
-This is version 0 of DendroCypher; please bear with us as we work out the kinks and make updates as we progress through the review process
+>Bielawski, J. P., Baker, J. L., & Mingrone, J. (2016). Inference of episodic changes in natural selection acting on protein coding sequences via CODEML. Current protocols in bioinformatics, 54(1), 6-15.
+
+Please cite this paper if you use this repository.
+
+This is version 0 of DendroCypher; please be patient as we work out the kinks and make updates as needed.
 
 ### How do I get set up? ###
 
