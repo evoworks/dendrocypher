@@ -10,7 +10,7 @@ DendroCypher is written in C++.  It is based on tree and matrix classes original
 
 DendroCypher was developed to support a Protocols Unit within the *Current Protocols in Bioinformatics*. The paper describing the DendroCypher:
 
->Bielawski, J. P., Baker, J. L., & Mingrone, J. (2016). Inference of episodic changes in natural selection acting on protein coding sequences via CODEML. Current protocols in bioinformatics, 54(1), 6-15.
+>*Bielawski, J. P., Baker, J. L., & Mingrone, J. (2016). Inference of episodic changes in natural selection acting on protein coding sequences via CODEML. Current protocols in bioinformatics, 54(1), 6-15.*
 
 Please cite this paper if you use this repository.
 
